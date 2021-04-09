@@ -2,9 +2,13 @@
     color: white;
     background-color:blueviolet;
     border-color: blueviolet;
-   content: center;
-}
+   
 
 .btn:hover {
     background-color: #570457;
+}
+
+.container {
+    max-width: fit-content;
+
 }
