@@ -1,5 +1,11 @@
 document.getElementById("StartButton").addEventListener("click", function () {
     startQuizTimer();
+    var start = document.getElementById("StartButton");
+    if (start.style.display === "none") {
+        start.style.display = "block";
+    } else {
+        start.style.display = "none";
+    }
     //hide start button and title
     //display first question and 4 option buttons
 
@@ -8,7 +14,7 @@ document.getElementById("StartButton").addEventListener("click", function () {
 
 
 function startQuizTimer() {
-    var timeleft = 15; //set starting time to like 90 seconds when done
+    var timeleft = 90; //set starting time to like 90 seconds when done
     console.log("button clicked");
     var downloadTimer = setInterval(function function1() {
         console.log("timeleft", timeleft);
@@ -24,24 +30,34 @@ function startQuizTimer() {
 }
 //event listeners for answers
 // use array for question objects
-
-//Inside which HTML element do we put the JavaScript? 1.<javascript> 2.<script>
 //when we're checking later on : if ? question.options[question.answer] === userAnswer
 var questions = [{
-    question: "Inside which HTML element do we put the JavaScript?",
-    options: ["a1", "a2", "a3", "a4"],
-    answer: 0 //would be a1 as correct
+    question1: "Inside which HTML element do we put the JavaScript?",
+    options: ["<javascript>", "<scripting>", "<script>", "<js>"],
+    answer: 2 //would be a1 as correct
 },
 {
-    question: "q",
-    options: ["a1", "a2", "a3", "a4"],
+    question2: "Where is the correct place to insert a JavaScript?",
+    options: ["The <body> section", "Both the <head> section and the <body> section are correct", "The <head> section", "In the <HTML> tag"],
+    answer: 1
+},
+{
+    question3: "How do you create a function in JavaScript?How do you create a function in JavaScript?",
+    options: ["function myFunction()", "function:myFunction()", "function = myFunction()", "create.function"],
     answer: 0
 },
 {
-    question: "q",
-    options: ["a1", "a2", "a3", "a4"],
-    answer: 0
-}];
+    question4: "How do you write an IF statement in JavaScript?",
+    options: ["if i = 5 then", "if (i == 5)", "if i == 5 then", "if i = 5"],
+    answer: 1
+},
+{
+    question5: "How to write an IF statement for executing some code if i is NOT equal to 5?",
+    options: ["if i =! 5 then", "if (i <> 5)", "if (i != 5)", "if i <> 5"],
+    answer: 2
+},
+];
+
 
 
 
